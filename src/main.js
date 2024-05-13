@@ -12,7 +12,7 @@ async function run() {
     const pr_number = core.getInput('pr_number', { required: true })
     const token = core.getInput('token', { required: true })
 
-    const octokit = new github.getOctokit(token)
+    const octokit = new github.getOctokit(token);
 
     const { data: changedFiles } = await octokit.rest.pulls.listFiles({
       owner,
@@ -39,9 +39,9 @@ async function run() {
       issue_number: pr_number,
       body: `
       Pull request #$[pr_number] has been update with \n
-      - $[diffData.changes] changes \n
-      - $[diffData.additions] additions \n
-      - $[diffData.deletions] deletions \n
+      - ${diffData.changes} changes \n
+      - ${diffData.additions} additions \n
+      - ${diffData.deletions} deletions \n
       `
     })
 
@@ -87,3 +87,7 @@ async function run() {
 module.exports = {
   run
 }
+
+// Adding few lines to check the actions.yml
+// Ready to test custom github actions
+// remove it later on
