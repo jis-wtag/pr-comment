@@ -19,7 +19,6 @@ inputs:
 
 # Define your outputs here.
 
-
 runs:
   using: node16
   main: dist/index.js
