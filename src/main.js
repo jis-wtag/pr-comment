@@ -87,3 +87,7 @@ async function run() {
 module.exports = {
   run
 }
+
+// Adding few lines to check the actions.yml
+// Ready to test custom github actions
+// remove it later on
