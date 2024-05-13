@@ -39,9 +39,9 @@ async function run() {
       issue_number: pr_number,
       body: `
       Pull request #$[pr_number] has been update with \n
-      - $[diffData.changes] changes \n
-      - $[diffData.additions] additions \n
-      - $[diffData.deletions] deletions \n
+      - ${diffData.changes} changes \n
+      - ${diffData.additions} additions \n
+      - ${diffData.deletions} deletions \n
       `
     })
 
