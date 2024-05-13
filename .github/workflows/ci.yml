@@ -23,6 +23,6 @@ jobs:
         uses: ./
         with:
           owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository_name }}
+          repo: ${{ github.event.repository.name }}
           pr_number: ${{ github.event.event_number }}
           token: ${{ secrets.GITHUB_TOKEN }}
